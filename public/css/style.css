@@ -1,8 +1,10 @@
 @charset 'utf-8';
 *{
+	border: none;
 	box-sizing: border-box;
 	font-family:'Segoe UI','Verdana';
 	margin: 0px;
+	outline: none;
 	padding: 0px;
 }
 body{
@@ -44,10 +46,46 @@ nav ul li a:hover{
 	padding: 10px;
 }
 h1{
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ddd;
 	font-weight: 100;
 	line-height: 60px;
 }
 .patient{
-	
+	border-top: 1px solid #ddd;
+	padding: 20px 0px;
+}
+.patient:nth-of-type(1){
+	border: none;
+}
+.dataName, .dataPatient{
+	float: left;
+}
+.dataName p, .dataPatient p{
+	line-height: 30px;
+}
+.dataName{
+	width: 200px;
+}
+.dataName p{
+	border-right: 1px solid #ddd;
+}
+.dataPatient{
+	color: #627088;
+}
+.dataPatient p{
+	padding-left: 10px;
+}
+.details{
+	background: #f05d23;
+	color: #fff;
+	float: right;
+	font-size: 16px;
+	padding: 8px 16px;
+}
+.details:hover{
+	background: #bb3d29;
+	cursor: pointer;
+}
+.clear{
+	clear:  both;
 }

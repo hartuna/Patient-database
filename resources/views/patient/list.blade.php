@@ -3,9 +3,18 @@
 <h1>{{ $header }}</h1>
 @foreach ($patients as $patient)
 <div class="patient">
-	<p>Imię: {{ $patient->name }}</p>
-	<p>Nazwisko: {{ $patient->surname }}</p>
-	<p>Lekarz prowadzący: {{ $patient->doctor }}</p>
+	<div class="dataName">
+		<p>Imię</p>
+		<p>Nazwisko</p>
+		<p>Lekarz prowadzący</p>
+	</div>
+	<div class="dataPatient">
+		<p>{{ $patient->name }}</p>
+		<p>{{ $patient->surname }}</p>
+		<p>{{ $patient->user->name }}</p>
+	</div>
+	<a href="{{ url('list', $patient->id) }}"><button class="details">Szczegóły</button></a>	
+	<div class="clear"></div>
 </div>
 @endforeach
 @stop

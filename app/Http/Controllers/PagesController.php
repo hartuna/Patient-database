@@ -12,6 +12,10 @@ class PagesController extends Controller
     	$patients = Patient::get();
     	return view('patient.list', compact('header', 'patients'));
     }
+    public function show($id){
+    	$patient = Patient::findOrFail($id);
+    	return view('patient.show')->with('patient', $patient);
+    }
     public function add(){
     	$header = 'Dodaj nowego pacjenta';
     	return view('patient.add')->with('header', $header);

@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
-<h1>{{ $header }}</h1>
-@foreach ($patients as $patient)
+<h1>{{ $header }} - wyszukano: {{ count($patients) }}</h1>
+@foreach($patients as $patient)
 <div class="patient">
 	<div class="dataName">
 		<p>Imię</p>

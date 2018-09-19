@@ -17,6 +17,9 @@ class CreatePatientsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('surname');
+            $table->bigInteger('pesel');
+            $table->integer('phone');
+            $table->string('email');
             $table->integer('doctor')->unsigned();
             $table->timestamps();
             $table->foreign('doctor')->references('id')->on('users');

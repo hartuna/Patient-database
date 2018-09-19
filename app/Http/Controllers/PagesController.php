@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Patient;
+use App\Visit;
 
 class PagesController extends Controller
 {
@@ -14,7 +15,8 @@ class PagesController extends Controller
     }
     public function show($id){
     	$patient = Patient::findOrFail($id);
-    	return view('patient.show')->with('patient', $patient);
+    	$visits = Visit::where('patient', $id)->get();
+    	return view('patient.show', compact('patient', 'visits'));
     }
     public function add(){
     	$header = 'Dodaj nowego pacjenta';

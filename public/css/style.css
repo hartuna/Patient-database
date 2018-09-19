@@ -89,3 +89,17 @@ h1{
 .clear{
 	clear:  both;
 }
+h2{
+	border: 1px solid #f05d23;
+	color: #f05d23;
+	font-weight: 100;
+	margin: 20px 0px;
+	padding: 10px 20px;
+}
+.visit{
+	border-top: 1px solid #ddd;
+	padding: 20px 0px;
+}
+.visit:nth-of-type(1){
+	border: none;
+}

@@ -75,14 +75,14 @@ h1{
 .dataPatient p{
 	padding-left: 10px;
 }
-.details{
+.details, .formButton{
 	background: #f05d23;
 	color: #fff;
 	float: right;
 	font-size: 16px;
 	padding: 8px 16px;
 }
-.details:hover{
+.details:hover, .formButton:hover{
 	background: #bb3d29;
 	cursor: pointer;
 }
@@ -102,4 +102,28 @@ h2{
 }
 .visit:nth-of-type(1){
 	border: none;
+}
+.formLeft{
+	float: left;
+	margin: 10px 0px;
+}
+.formLeft label{
+	display: block;
+	line-height: 30px;
+	margin: 10px 0px;
+}
+.formRight{
+	float: left;
+	margin: 10px 0px;
+}
+.inputText{
+	border: 1px solid #ddd;
+	display: block;
+	height: 30px;
+	margin: 10px 30px;
+	padding: 0px 10px;
+	width: 300px;
+}
+.formButton{
+	float: left;
 }

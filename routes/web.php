@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/list', 'PagesController@list');
 Route::get('/list/{id}', 'PagesController@show');
 Route::get('/add', 'PagesController@add');
+Route::post('/list', 'PagesController@savePatient');

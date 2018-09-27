@@ -14,7 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/list', 'PagesController@list');
-Route::get('/list/{id}', 'PagesController@show');
-Route::get('/add', 'PagesController@add');
-Route::post('/list', 'PagesController@savePatient');
+
+
+Route::group(['middleware'=>['web']], function(){
+	Route::get('/list', 'PagesController@list');
+	Route::get('/list/{id}', 'PagesController@show');
+	Route::get('/add', 'PagesController@add');
+	Route::post('/list', 'PagesController@savePatient');
+});

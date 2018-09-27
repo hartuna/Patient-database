@@ -127,3 +127,17 @@ h2{
 .formButton{
 	float: left;
 }
+#errors{
+	margin-top: 15px;
+	width: 100%;
+}
+#errors ul{
+	list-style-type: none;
+}
+#errors ul li{
+	background: #bb3d29;
+	color: #fff;
+	display: inline-block;
+	margin: 2px 0px;
+	padding: 4px 10px;
+}

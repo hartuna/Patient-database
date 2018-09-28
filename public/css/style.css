@@ -75,14 +75,14 @@ h1{
 .dataPatient p{
 	padding-left: 10px;
 }
-.details, .formButton{
+.details, .formButton, .deleteButton{
 	background: #f05d23;
 	color: #fff;
 	float: right;
 	font-size: 16px;
 	padding: 8px 16px;
 }
-.details:hover, .formButton:hover{
+.details:hover, .formButton:hover, .deleteButton:hover{
 	background: #bb3d29;
 	cursor: pointer;
 }

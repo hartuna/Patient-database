@@ -6,6 +6,7 @@ use Request;
 use App\Patient;
 use App\Visit;
 use App\User;
+use App\Preview;
 use App\Http\Requests\AddPatientRequest;
 
 class PagesController extends Controller
@@ -18,7 +19,8 @@ class PagesController extends Controller
     public function show($id){
     	$patient = Patient::findOrFail($id);
     	$visits = Visit::latest()->where('patient', $id)->get();
-    	return view('patient.show', compact('patient', 'visits'));
+        $previews = Preview::latest()->where('patient', $id)->get();
+    	return view('patient.show', compact('patient', 'visits', 'previews'));
     }
     public function add(){
     	$header = 'Dodaj nowego pacjenta';
@@ -28,5 +30,9 @@ class PagesController extends Controller
     public function savePatient(AddPatientRequest $request){
         Patient::create($request->all());
         return redirect('list');
+    }
+    public function deletePreview($id_patient, $id){
+        Preview::find($id)->delete();
+        return redirect('list/' . $id_patient);
     }
 }

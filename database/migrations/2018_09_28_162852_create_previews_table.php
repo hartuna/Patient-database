@@ -1,8 +1,10 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateVisitsTable extends Migration
+
+class CreatePreviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -11,7 +13,7 @@ class CreateVisitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('visits', function (Blueprint $table) {
+        Schema::create('previews', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
             $table->string('title');
@@ -20,6 +22,7 @@ class CreateVisitsTable extends Migration
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -27,6 +30,6 @@ class CreateVisitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visits');
+        Schema::dropIfExists('previews');
     }
 }

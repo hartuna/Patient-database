@@ -11,6 +11,9 @@ use App\Http\Requests\AddPatientRequest;
 
 class PagesController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     public function list(){
     	$header = 'Lista pacjentów';
     	$patients = Patient::get();

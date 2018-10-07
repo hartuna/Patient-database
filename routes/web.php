@@ -21,3 +21,4 @@ Route::group(['middleware'=>['web']], function(){
 	Route::post('/list', 'PagesController@savePatient');
 	Route::delete('/list/{id_patient}/{id}', 'PagesController@deletePreview');
 });
+Auth::routes();
